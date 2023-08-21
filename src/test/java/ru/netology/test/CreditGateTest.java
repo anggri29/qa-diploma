@@ -102,7 +102,7 @@ public class CreditGateTest {
         val startPage = new PaymentPage();
         val payment = startPage.clickCreditPage();
         payment.inputData(DataHelper.getCardHolderEmpty());
-        payment.waitNotificationWrongFormat();
+        payment.waitNotificationRequiredError();
         assertEquals("0", SQLHelper.getOrderCount());
     }
 

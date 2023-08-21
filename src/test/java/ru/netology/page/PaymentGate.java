@@ -64,7 +64,9 @@ public class PaymentGate {
     public void waitNotificationExpiredError() {
         cardExpiredError.shouldBe(visible, Duration.ofSeconds(15));
     }
-
+    public void waitNotificationRequiredError() {
+        requiredFieldError.shouldBe(visible, Duration.ofSeconds(15));
+    }
     public void waitNotificationWrongFormat4Fields() {
         wrongFormat4Error.shouldHave(size(4));
         requiredFieldError.shouldBe(visible, Duration.ofSeconds(15));

@@ -100,7 +100,7 @@ public class DataHelper {
         Faker faker = new Faker();
         String holder = faker.name().firstName() + " " + faker.name().lastName();
         String month = getShiftedMonth();
-        String year = getShiftedYear(6);
+        String year = getShiftedYear(10);
         String cvc = faker.number().digits(3);
         return new CardClass("4444444444444441", month, year, holder, cvc);
     }
@@ -109,7 +109,7 @@ public class DataHelper {
         Faker faker = new Faker();
         String holder = faker.name().firstName() + " " + faker.name().lastName();
         String month = getShiftedMonth();
-        String year = getShiftedYear(1);
+        String year = getShiftedYear(-5);
         String cvc = faker.number().digits(3);
         return new CardClass("4444444444444441", month, year, holder, cvc);
     }
